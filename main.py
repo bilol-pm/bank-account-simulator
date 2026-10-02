@@ -18,8 +18,11 @@ class BankAccount:
         else:
             self.balance -= amount
 
+    def show_info(self):
+        print(f"Account owner: {self.owner}, balance: {self.balance}")
+
 acc = BankAccount("Bilol", 100)
 acc.deposit(50)
 acc.withdraw(30)
 acc.withdraw(1000)
-print(acc.balance)
+acc.show_info()
